@@ -6,3 +6,7 @@
   - ビルド -> 送信？
 
 
+BLE:  app ---> rpi
+UART:  rpi ---> DFPlayer
+
+
