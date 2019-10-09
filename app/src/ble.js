@@ -28,25 +28,23 @@ function getSupportedProperties(characteristic) {
   return '[' + supportedProperties.join(', ') + ']';
 }
 
-function connect() {
+async function getServer() {
   // Validate services UUID entered by user first.
   /*let optionalServices = document.querySelector('#optionalServices').value
     .split(/, ?/).map(s => s.startsWith('0x') ? parseInt(s) : s)
     .filter(s => s && BluetoothUUID.getService);
   */
   console.log('Requesting any Bluetooth Device...');
-  return navigator.bluetooth.requestDevice({
+  let device = await navigator.bluetooth.requestDevice({
     filters: [{
       services: SERVICES
     }] // <- Prefer filters to save energy & show relevant devices.
     //acceptAllDevices: true,
     //optionalServices: optionalServices
   })
-  .then(device => {
-    console.log('Connecting to GATT Server...');
-    console.log("gatt:", device.name)
-    return device.gatt.connect();
-  })
+  console.log('Connecting to GATT Server...');
+  console.log("gatt:", device.name)
+  return device.gatt.connect();
 }
 function getService(server) {
   console.log('Getting Services...');
@@ -67,24 +65,22 @@ class BLE {
   isConnected() {
     return this.server && this.service && this.chars.length > 0
   }
-  connect() {
-    const self = this
-    return connect().then(server => {
-      self.server = server;
-      return getService(server)
-    }).then(service => {
-      self.service = service;
-      return getChars(service);
-    }).then(characteristics => {
-      console.log('> Service: ' + self.service.uuid);
-      self.chars = characteristics;
-      characteristics.forEach(characteristic => {
-        console.log('>> Characteristic: ' + characteristic.uuid + ' ' + getSupportedProperties(characteristic));
-      });
-      return true;
-    }).catch(error => {
-      console.log('Argh! ' + error);
+  async reconnect() {
+    this.server = null;
+    this.service = null;
+    this.chars = [];
+    this.fetchChars();
+  }
+  async fetchChars() {
+    this.server = this.server || await getServer();
+    this.service = this.service || await getService(this.server);
+    this.chars = await getChars(this.service);
+    
+    console.log('> Service: ' + this.service.uuid);
+    this.chars.forEach(characteristic => {
+      console.log('>> Characteristic: ' + characteristic.uuid + ' ' + getSupportedProperties(characteristic));
     });
+    return true;
   }
   getChar(n) {
     return this.chars.find(v => v.uuid === getUUID(n).toLowerCase());

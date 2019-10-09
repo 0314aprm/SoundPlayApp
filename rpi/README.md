@@ -12,29 +12,33 @@ service
 
 
 # chars
-曲データ
-  フォルダ数
-  フォルダ毎ファイル数
-プレイヤー
-  status:  playing? mp3 state
-  current file: readCurrentFileNumber
-  volume (1 octet)
-  playback mode (1 octet)
-  EQ
+play
+  get status:   playing? mp3 state
+    current file: readCurrentFileNumber
+  start
+  next
+  previous
+  playFile
+  playFolder
+  pause
+volume
+  get volume
+  set volume
+  increase volume
+  decrease volume
+playback moed
+  get loop
+  set loop
+  enable loop
+  disable loop
+EQ
+  get EQ
+  set EQ
+music status
+  folders
+  files
+player status
 
-
-# 操作
-pause
-start
-next
-previous
-playFile
-increase volume
-decrease volume
-set volume
-set loop
-enable loop
-disable loop
 
 #
 error response

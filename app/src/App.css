@@ -54,6 +54,10 @@
   border-top: 1px white solid;
   transition: transform .4s linear;
 }
+.player-control {
+  margin-left: 1em;
+  cursor: pointer;
+}
 
 .content {
   padding: 10% 10%;

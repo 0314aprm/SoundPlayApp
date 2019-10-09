@@ -41,6 +41,8 @@ func NewPlayChar(s *Server) *ble.Characteristic {
 			s.df.next()
 		case 'p':
 			s.df.previous()
+		case 'r':
+			s.df.start()
 		case 's':
 			s.df.pause()
 		case 'f':
@@ -73,9 +75,11 @@ func NewVolumeChar(s *Server) *ble.Characteristic {
 		case 'd':
 			s.df.volumeDown()
 		default:
-			vol := uint16(str[0]) << 8
-			vol += uint16(str[1])
-			s.df.volume(vol)
+			if len(str) >= 2 {
+				vol := uint16(str[0]) << 8
+				vol += uint16(str[1])
+				s.df.volume(vol)
+			}
 		}
 	}))
 	return c
@@ -129,23 +133,45 @@ func NewEQChar(s *Server) *ble.Characteristic {
 // NewMusicChar ...
 func NewMusicChar(s *Server) *ble.Characteristic {
 	c := ble.NewCharacteristic(MusicCharUUID)
+	ch := make(chan uint16, 10)
 
 	c.HandleRead(ble.ReadHandlerFunc(func(req ble.Request, rsp ble.ResponseWriter) {
-		folders := s.df.readFolderCounts()
-		files := s.df.readFileCounts(0)
+		folders := byte(s.df.readFolderCounts())
+		totalFiles := s.df.readFileCounts(0)
 		fmt.Printf("music-read: vol: %d\n", folders)
-		fmt.Printf("music-read: req: %d\n", files)
+		fmt.Printf("music-read: req: %d\n", totalFiles)
 
-		rsp.Write([]byte{byte(folders), byte(files)})
+		if folders > 100 {
+			folders = 100
+		}
+		b := make([]byte, folders)
+		for i := byte(1); i <= folders; i++ {
+			files := byte(s.df.readFileCountsInFolder(uint16(i)))
+			b[i-1] = files
+		}
+
+		rsp.Write(b)
 	}))
 	c.HandleWrite(ble.WriteHandlerFunc(func(req ble.Request, rsp ble.ResponseWriter) {
 		log.Printf("music: Wrote %s", string(req.Data()))
 		v := uint16(req.Data()[0]) << 8
 		v += uint16(req.Data()[1])
 		folder := v
-
-		files := s.df.readFileCountsInFolder(folder)
-		rsp.Write([]byte{byte(files)})
+		ch <- folder
+	}))
+	c.HandleNotify(ble.NotifyHandlerFunc(func(req ble.Request, n ble.Notifier) {
+		log.Printf("test: Notification subscribed")
+		for {
+			select {
+			case <-n.Context().Done():
+				log.Printf("count: Notification unsubscribed")
+				return
+			case folder := <-ch:
+				files := s.df.readFileCountsInFolder(folder)
+				log.Printf("count: Notify files: %d", files)
+				n.Write([]byte{byte(files)})
+			}
+		}
 	}))
 	return c
 }
