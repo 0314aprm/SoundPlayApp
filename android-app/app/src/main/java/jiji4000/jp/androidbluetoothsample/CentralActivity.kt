@@ -85,28 +85,27 @@ class CentralActivity : AppCompatActivity() {
                 // UUIDが同じかどうかを確認する.
                 val bleService = gatt.getService(UUID.fromString(getString(R.string.uuid_service)))
                 if (bleService != null) {
-                    Log.d(TAG, "FOUNDDDDDDDDDDDDDWADWADJIWOAJDOWA")
                     // 指定したUUIDを持つCharacteristicを確認する.
+                    isConnect = true
+                    runOnUiThread({
+                        message_text.setText("connect success!")
+                    })
+
+
                     bleCharacteristic = bleService.getCharacteristic(UUID.fromString(getString(R.string.uuid_characteristic)))
                     if (bleCharacteristic != null) {
                         // Service, CharacteristicのUUIDが同じならBluetoothGattを更新する.
                         bleGatt = gatt
-                        // キャラクタリスティックが見つかったら、Notificationをリクエスト.
-                        bleGatt?.setCharacteristicNotification(bleCharacteristic, true)
 
-                        // set Characteristic Notification enable (uuid_characteristic_config is static value)
-                        val bleDescriptor = bleCharacteristic.getDescriptor(
-                                UUID.fromString(getString(R.string.uuid_characteristic_config)))
-                        bleDescriptor.setValue(BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE)
-                        // Write the value of a given descriptor to the associated remote device.
-                        bleGatt?.writeDescriptor(bleDescriptor)
-                        isConnect = true
-                        // show message
-                        runOnUiThread({
-                            message_text.setText("connect success!")
-                        })
-
+                        val message = "f\u0001\u0001"
+                        bleCharacteristic.setValue(message)
+                        bleGatt?.writeCharacteristic(bleCharacteristic)
                     }
+
+
+
+
+
                 }
             }
         }
@@ -175,7 +174,20 @@ class CentralActivity : AppCompatActivity() {
         // scanButton
         search_button.setOnClickListener { scanNewDevice() }
         // sendButton
-        send_button.setOnClickListener { sendCentralData(input_message.text.toString()) }
+        send_button.setOnClickListener {
+//            sendCentralData(input_message.text.toString())
+            val bleService = bleGatt?.getService(UUID.fromString(getString(R.string.uuid_service)))
+            if (bleService != null) {
+                val bleCharacteristicVolume = bleService.getCharacteristic(UUID.fromString(getString(R.string.uuid_characteristic_volume)))
+                if (bleCharacteristicVolume != null) {
+                    val message = "\u0000\u000A"
+                    bleCharacteristicVolume.setValue(message)
+                    bleGatt?.writeCharacteristic(bleCharacteristicVolume)
+
+                    Log.d(TAG, "volume char")
+                }
+            }
+        }
         // init
         bleManager = getSystemService(Context.BLUETOOTH_SERVICE) as BluetoothManager
         bleAdapter = bleManager.getAdapter()
