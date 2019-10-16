@@ -85,30 +85,12 @@ class CentralActivity : AppCompatActivity() {
                 // UUIDが同じかどうかを確認する.
                 val bleService = gatt.getService(UUID.fromString(getString(R.string.uuid_service)))
                 if (bleService != null) {
-                    Log.d(TAG, "FOUNDDDDDDDDDDDDDWADWADJIWOAJDOWA")
-                    // 指定したUUIDを持つCharacteristicを確認する.
-                    bleCharacteristic = bleService.getCharacteristic(UUID.fromString(getString(R.string.uuid_characteristic)))
-                    if (bleCharacteristic != null) {
-                        // Service, CharacteristicのUUIDが同じならBluetoothGattを更新する.
-                        bleGatt = gatt
-                        // キャラクタリスティックが見つかったら、Notificationをリクエスト.
-                        val data = "dwdwa"
-                        bleCharacteristic.setValue(data)
-                        bleGatt?.writeCharacteristic(bleCharacteristic)
-//                        bleGatt?.setCharacteristicNotification(bleCharacteristic, true)
-//                        // set Characteristic Notification enable (uuid_characteristic_config is static value)
-//                        val bleDescriptor = bleCharacteristic.getDescriptor(
-//                                UUID.fromString(getString(R.string.uuid_characteristic_config)))
-//                        bleDescriptor.setValue(BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE)
-//                        // Write the value of a given descriptor to the associated remote device.
-//                        bleGatt?.writeDescriptor(bleDescriptor)
-                        isConnect = true
-                        // show message
-                        runOnUiThread({
-                            message_text.setText("connect success!")
-                        })
+                    isConnect = true
+                    runOnUiThread({
+                        message_text.setText("connect success!")
+                    })
 
-                    }
+                    play(1, 1)
                 }
             }
         }
@@ -163,6 +145,31 @@ class CentralActivity : AppCompatActivity() {
         }
     }
 
+    fun play(folder: Int, file: Int) {
+        val bleService = bleGatt?.getService(UUID.fromString(getString(R.string.uuid_service)))
+        if (bleService != null) {
+            bleCharacteristic = bleService.getCharacteristic(UUID.fromString(getString(R.string.uuid_characteristic)))
+            if (bleCharacteristic != null) {
+                val message = "f" + (folder.toChar()) + (file.toChar())
+                bleCharacteristic.setValue(message)
+                bleGatt?.writeCharacteristic(bleCharacteristic)
+            }
+        }
+    }
+    fun setVolume(v: Int) {
+        val bleService = bleGatt?.getService(UUID.fromString(getString(R.string.uuid_service)))
+        if (bleService != null) {
+            val bleCharacteristicVolume = bleService.getCharacteristic(UUID.fromString(getString(R.string.uuid_characteristic_volume)))
+            if (bleCharacteristicVolume != null) {
+                val message = "\u0000\u000A"
+                bleCharacteristicVolume.setValue(message)
+                bleGatt?.writeCharacteristic(bleCharacteristicVolume)
+
+                Log.d(TAG, "volume char")
+            }
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_central)
@@ -172,7 +179,11 @@ class CentralActivity : AppCompatActivity() {
         button2.setOnClickListener { Log.d(TAG, "button2") }
         button3.setOnClickListener { Log.d(TAG, "button3") }
         button4.setOnClickListener { Log.d(TAG, "button4") }
-
+        // sendButton
+        send_button.setOnClickListener {
+//            sendCentralData(input_message.text.toString())
+            setVolume(10)
+        }
         // init
         bleManager = getSystemService(Context.BLUETOOTH_SERVICE) as BluetoothManager
         bleAdapter = bleManager.getAdapter()

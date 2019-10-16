@@ -9,7 +9,11 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="23f842aa-adba-4297-b702-f041787b3cbf" name="Default Changelist" comment="">
+=======
+    <list default="true" id="5dc6ad3f-fc4d-4d89-aed0-48c59c98b135" name="Default" comment="">
+>>>>>>> 1e7212ef4551a09b951461484069d8f25e34a905
       <change beforePath="$PROJECT_DIR$/app/src/main/java/jiji4000/jp/androidbluetoothsample/CentralActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/jiji4000/jp/androidbluetoothsample/CentralActivity.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
@@ -20,9 +24,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="isMigrated" value="true" />
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_5X_API_24" />
+=======
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_5X_API_27" />
+>>>>>>> 1e7212ef4551a09b951461484069d8f25e34a905
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -39,6 +48,7 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/jiji4000/jp/androidbluetoothsample/CentralActivity.kt">
+<<<<<<< HEAD
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="67">
               <caret line="170" column="55" selection-start-line="170" selection-start-column="55" selection-end-line="170" selection-end-column="55" />
@@ -78,29 +88,63 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="96">
               <caret line="4" column="84" selection-start-line="4" selection-start-column="84" selection-end-line="4" selection-end-column="84" />
+=======
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="190" column="9" lean-forward="true" selection-start-line="190" selection-start-column="9" selection-end-line="190" selection-end-column="9" />
+              <folding>
+                <element signature="e#1115#1928#0" />
+                <element signature="e#3547#3579#1" expanded="true" />
+                <element signature="e#4785#4824#0" expanded="true" />
+                <element signature="e#6412#6444#1" expanded="true" />
+                <element signature="e#6558#6597#1" expanded="true" />
+                <element signature="e#6952#6984#1" expanded="true" />
+                <element signature="e#7108#7154#1" expanded="true" />
+                <element signature="e#7953#8034#0" />
+                <element signature="e#8060#8779#0" />
+                <element signature="e#8865#9012#0" />
+                <element signature="e#9126#9753#0" />
+                <element signature="e#9331#9363#1" expanded="true" />
+              </folding>
+>>>>>>> 1e7212ef4551a09b951461484069d8f25e34a905
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_central.xml">
+<<<<<<< HEAD
           <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-24">
               <caret line="44" column="25" lean-forward="true" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="31" />
+=======
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="35" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="35" />
+>>>>>>> 1e7212ef4551a09b951461484069d8f25e34a905
             </state>
           </provider>
+          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/app/src/main/java/jiji4000/jp/androidbluetoothsample/CentralListAdapter.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="264">
               <caret line="15" selection-start-line="15" selection-end-line="15" />
+=======
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+>>>>>>> 1e7212ef4551a09b951461484069d8f25e34a905
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="true" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
           <provider editor-type-id="android-designer2" />
@@ -123,11 +167,15 @@
           <provider editor-type-id="text-editor" />
         </entry>
       </file>
+=======
+>>>>>>> 1e7212ef4551a09b951461484069d8f25e34a905
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+      <find>writec</find>
       <find>onServicesDiscovered</find>
+<<<<<<< HEAD
       <find>search</find>
       <find>scanNewDevice</find>
       <find>startScanByBleScanner</find>
@@ -147,10 +195,18 @@
       <find>oncli</find>
       <find>scanNewDevice()</find>
       <find>liste</find>
+=======
+      <find>writeCharacteristic</find>
+      <find>onCharacteristicWrite</find>
+      <find>send</find>
+      <find>call on</find>
+      <find>search_button</find>
+>>>>>>> 1e7212ef4551a09b951461484069d8f25e34a905
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+<<<<<<< HEAD
   </component>
   <component name="GotoClassSymbolConfiguration">
     <file-type-list>
@@ -221,24 +277,36 @@
       <filtered-out-file-type name="XML" />
       <filtered-out-file-type name="yaml" />
     </file-type-list>
+=======
+>>>>>>> 1e7212ef4551a09b951461484069d8f25e34a905
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/app/src/main/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/jiji4000/jp/androidbluetoothsample/MainActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_central.xml" />
+=======
+>>>>>>> 1e7212ef4551a09b951461484069d8f25e34a905
         <option value="$PROJECT_DIR$/app/src/main/java/jiji4000/jp/androidbluetoothsample/CentralActivity.kt" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+<<<<<<< HEAD
     <option name="x" value="243" />
     <option name="y" value="-12" />
     <option name="width" value="981" />
     <option name="height" value="528" />
+=======
+    <option name="x" value="310" />
+    <option name="y" value="-25" />
+    <option name="width" value="1400" />
+    <option name="height" value="990" />
+>>>>>>> 1e7212ef4551a09b951461484069d8f25e34a905
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -253,19 +321,51 @@
           <expand>
             <path>
               <item name="android-app" type="1abcf292:AndroidViewProjectNode" />
+<<<<<<< HEAD
               <item name="android-app-app" type="feadf853:AndroidModuleNode" />
             </path>
             <path>
               <item name="android-app" type="1abcf292:AndroidViewProjectNode" />
               <item name="android-app-app" type="feadf853:AndroidModuleNode" />
+=======
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="android-app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="android-app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="androidbluetoothsample" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+>>>>>>> 1e7212ef4551a09b951461484069d8f25e34a905
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
             </path>
             <path>
               <item name="android-app" type="1abcf292:AndroidViewProjectNode" />
+<<<<<<< HEAD
               <item name="android-app-app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
               <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
+=======
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="android-app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+>>>>>>> 1e7212ef4551a09b951461484069d8f25e34a905
           </expand>
           <select />
         </subPane>
@@ -274,6 +374,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+<<<<<<< HEAD
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Nexus_5X_API_24" />
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2019-10-16T03:48:13.094Z" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -283,6 +384,15 @@
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+=======
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="7BKDU17A13000338" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2019-10-16T06:11:20.748Z" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="not.eligible.for.single.variant.sync" value="true" />
+    <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+>>>>>>> 1e7212ef4551a09b951461484069d8f25e34a905
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -296,7 +406,20 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Android App.android-bluetooth-sample-app">
+=======
+  <component name="RunManager">
+    <configuration name="&lt;template&gt;" type="JUnit" default="true" selected="false">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+    </configuration>
+>>>>>>> 1e7212ef4551a09b951461484069d8f25e34a905
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -304,6 +427,7 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="android-app-app" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="android-app-app" />
       <option name="DEPLOY" value="true" />
@@ -359,6 +483,10 @@
     </configuration>
     <configuration name="android-bluetooth-sample-app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="android-app-app" />
+=======
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="app" />
+>>>>>>> 1e7212ef4551a09b951461484069d8f25e34a905
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
       <option name="DEPLOY_AS_INSTANT" value="false" />
@@ -410,17 +538,38 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SvnConfiguration">
-    <configuration>$USER_HOME$/.subversion</configuration>
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="23f842aa-adba-4297-b702-f041787b3cbf" name="Default Changelist" comment="" />
-      <created>1570770921438</created>
+      <changelist id="5dc6ad3f-fc4d-4d89-aed0-48c59c98b135" name="Default" comment="" />
+      <created>1571197410421</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1570770921438</updated>
+      <updated>1571197410421</updated>
     </task>
     <servers />
   </component>
@@ -434,16 +583,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="704" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Structure" order="0" side_tool="true" />
-      <window_info id="Image Layers" order="1" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25302014" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Captures" order="2" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="3" />
       <window_info id="Build Variants" order="4" side_tool="true" />
-      <window_info id="Resources Explorer" order="5" weight="0.15870446" />
+      <window_info id="Image Layers" order="5" />
       <window_info id="Capture Tool" order="6" />
+<<<<<<< HEAD
       <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.25101215" />
       <window_info id="Captures" order="8" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Logcat" order="0" weight="0.510989" />
@@ -492,6 +642,38 @@
       <window_info anchor="right" id="Device File Explorer" order="5" side_tool="true" />
       <window_info anchor="right" id="Preview" order="6" />
     </layout-to-restore>
+=======
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info id="Resources Explorer" order="8" />
+      <window_info anchor="bottom" id="Android Profiler" sideWeight="0.49932885" weight="0.3286119" />
+      <window_info anchor="bottom" id="Logcat" sideWeight="0.49932885" weight="0.3286119" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49530202" weight="0.3286119" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4986577" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4986577" weight="0.3286119" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.504698" side_tool="true" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4986577" weight="0.3286119" />
+      <window_info anchor="bottom" id="Build" order="10" sideWeight="0.4966443" weight="0.3286119" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3295325" />
+      <window_info anchor="bottom" id="Flutter Performance" order="12" side_tool="true" />
+      <window_info anchor="right" id="Preview" weight="0.3295302" />
+      <window_info anchor="right" id="Device File Explorer" side_tool="true" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Gradle" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Flutter Inspector" order="6" />
+      <window_info anchor="right" id="Flutter Outline" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Assistant" order="9" weight="0.3295302" />
+    </layout>
+>>>>>>> 1e7212ef4551a09b951461484069d8f25e34a905
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
@@ -499,6 +681,7 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
@@ -598,6 +781,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="67">
           <caret line="170" column="55" selection-start-line="170" selection-start-column="55" selection-end-line="170" selection-end-column="55" />
+=======
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.71/2e8041d08283cbbb58ad131617486fc6449f6c85/kotlin-stdlib-1.2.71-sources.jar!/kotlin/Any.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="37" column="41" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_central.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="35" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="35" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/jiji4000/jp/androidbluetoothsample/CentralActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="190" column="9" lean-forward="true" selection-start-line="190" selection-start-column="9" selection-end-line="190" selection-end-column="9" />
+          <folding>
+            <element signature="e#1115#1928#0" />
+            <element signature="e#3547#3579#1" expanded="true" />
+            <element signature="e#4785#4824#0" expanded="true" />
+            <element signature="e#6412#6444#1" expanded="true" />
+            <element signature="e#6558#6597#1" expanded="true" />
+            <element signature="e#6952#6984#1" expanded="true" />
+            <element signature="e#7108#7154#1" expanded="true" />
+            <element signature="e#7953#8034#0" />
+            <element signature="e#8060#8779#0" />
+            <element signature="e#8865#9012#0" />
+            <element signature="e#9126#9753#0" />
+            <element signature="e#9331#9363#1" expanded="true" />
+          </folding>
+>>>>>>> 1e7212ef4551a09b951461484069d8f25e34a905
         </state>
       </provider>
     </entry>
