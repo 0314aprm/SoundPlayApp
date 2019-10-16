@@ -92,14 +92,16 @@ class CentralActivity : AppCompatActivity() {
                         // Service, CharacteristicのUUIDが同じならBluetoothGattを更新する.
                         bleGatt = gatt
                         // キャラクタリスティックが見つかったら、Notificationをリクエスト.
-                        bleGatt?.setCharacteristicNotification(bleCharacteristic, true)
-
-                        // set Characteristic Notification enable (uuid_characteristic_config is static value)
-                        val bleDescriptor = bleCharacteristic.getDescriptor(
-                                UUID.fromString(getString(R.string.uuid_characteristic_config)))
-                        bleDescriptor.setValue(BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE)
-                        // Write the value of a given descriptor to the associated remote device.
-                        bleGatt?.writeDescriptor(bleDescriptor)
+                        val data = "dwdwa"
+                        bleCharacteristic.setValue(data)
+                        bleGatt?.writeCharacteristic(bleCharacteristic)
+//                        bleGatt?.setCharacteristicNotification(bleCharacteristic, true)
+//                        // set Characteristic Notification enable (uuid_characteristic_config is static value)
+//                        val bleDescriptor = bleCharacteristic.getDescriptor(
+//                                UUID.fromString(getString(R.string.uuid_characteristic_config)))
+//                        bleDescriptor.setValue(BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE)
+//                        // Write the value of a given descriptor to the associated remote device.
+//                        bleGatt?.writeDescriptor(bleDescriptor)
                         isConnect = true
                         // show message
                         runOnUiThread({
@@ -159,14 +161,6 @@ class CentralActivity : AppCompatActivity() {
             super.onDescriptorRead(gatt, descriptor, status)
             Log.d(TAG, "call onDescriptorRead")
         }
-
-        override fun onDescriptorWrite(gatt: BluetoothGatt, descriptor: BluetoothGattDescriptor, status: Int) {
-            super.onDescriptorWrite(gatt, descriptor, status)
-            Log.d(TAG, "call onDescriptorWrite")
-            val message = input_message.text.toString()
-            bleCharacteristic.setValue(message)
-            bleGatt?.writeCharacteristic(bleCharacteristic)
-        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -174,8 +168,6 @@ class CentralActivity : AppCompatActivity() {
         setContentView(R.layout.activity_central)
         // scanButton
         search_button.setOnClickListener { scanNewDevice() }
-        // sendButton
-        send_button.setOnClickListener { sendCentralData(input_message.text.toString()) }
         // init
         bleManager = getSystemService(Context.BLUETOOTH_SERVICE) as BluetoothManager
         bleAdapter = bleManager.getAdapter()
