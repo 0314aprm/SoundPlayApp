@@ -89,8 +89,6 @@ class CentralActivity : AppCompatActivity() {
                     runOnUiThread({
                         message_text.setText("connect success!")
                     })
-
-                    play(1, 1)
                 }
             }
         }
@@ -175,12 +173,12 @@ class CentralActivity : AppCompatActivity() {
         setContentView(R.layout.activity_central)
         // scanButton
         search_button.setOnClickListener { scanNewDevice() }
-        button.setOnClickListener { Log.d(TAG, "button") }
-        button2.setOnClickListener { Log.d(TAG, "button2") }
-        button3.setOnClickListener { Log.d(TAG, "button3") }
-        button4.setOnClickListener { Log.d(TAG, "button4") }
-
-        // init
+        button.setOnClickListener { play(1, 1); Log.d(TAG, "button") }
+        button2.setOnClickListener { play(1, 2); Log.d(TAG, "button2") }
+        button3.setOnClickListener { play(2, 1); Log.d(TAG, "button3") }
+        button4.setOnClickListener { play(1, 1); Log.d(TAG, "button4") }
+        volume_button.setOnClickListener { setVolume(10) }
+            // init
         bleManager = getSystemService(Context.BLUETOOTH_SERVICE) as BluetoothManager
         bleAdapter = bleManager.getAdapter()
     }
