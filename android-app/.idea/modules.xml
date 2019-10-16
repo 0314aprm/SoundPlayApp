@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/android-app.iml" filepath="$PROJECT_DIR$/android-app.iml" />
-<<<<<<< HEAD
-      <module fileurl="file://$PROJECT_DIR$/app/android-app-app.iml" filepath="$PROJECT_DIR$/app/android-app-app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/androidBluetoothSample.iml" filepath="$PROJECT_DIR$/androidBluetoothSample.iml" />
-=======
->>>>>>> 1e7212ef4551a09b951461484069d8f25e34a905
+      <module fileurl="file://$PROJECT_DIR$/.idea/android-app.iml" filepath="$PROJECT_DIR$/.idea/android-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

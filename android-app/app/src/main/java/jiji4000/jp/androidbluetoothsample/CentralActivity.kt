@@ -179,11 +179,7 @@ class CentralActivity : AppCompatActivity() {
         button2.setOnClickListener { Log.d(TAG, "button2") }
         button3.setOnClickListener { Log.d(TAG, "button3") }
         button4.setOnClickListener { Log.d(TAG, "button4") }
-        // sendButton
-        send_button.setOnClickListener {
-//            sendCentralData(input_message.text.toString())
-            setVolume(10)
-        }
+
         // init
         bleManager = getSystemService(Context.BLUETOOTH_SERVICE) as BluetoothManager
         bleAdapter = bleManager.getAdapter()
